@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_activity_nav"
-    app:startDestination="@id/anasayfaFragment">
+    app:startDestination="@id/filmAnasayfaFragment">
 
     <fragment
         android:id="@+id/anasayfaFragment"
@@ -22,5 +22,23 @@
         <argument
             android:name="nesne"
             app:argType="com.example.recyclerviewkullanimi.Kisiler" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmAnasayfaFragment"
+        android:name="com.example.recyclerviewkullanimi.FilmAnasayfaFragment"
+        android:label="FilmAnasayfaFragment"
+        tools:layout="@layout/fragment_film_anasayfa">
+        <action
+            android:id="@+id/filmDetayGecis"
+            app:destination="@id/filmDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmDetayFragment"
+        android:name="com.example.recyclerviewkullanimi.FilmDetayFragment"
+        android:label="FilmDetayFragment"
+        tools:layout="@layout/fragment_film_detay">
+        <argument
+            android:name="filmnesne"
+            app:argType="com.example.recyclerviewkullanimi.Filmler" />
     </fragment>
 </navigation>
